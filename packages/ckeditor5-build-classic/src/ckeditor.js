@@ -7,17 +7,16 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
-import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import ImageResize from 'ckeditor5/packages/ckeditor5-image/src/imageresize';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
-import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -27,14 +26,13 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	Heading,
 	Image,
-	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResize,
+	Paragraph,
 	Link,
-	List,
-	MediaEmbed,
-	Paragraph
+	List
 ];
 
 ClassicEditor.defaultConfig = {
@@ -47,16 +45,43 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'|',
-			'imageUpload',
-			'mediaEmbed'
+			'imageUpload'
 		]
 	},
 	image: {
+		upload: {
+			panel: {
+				items: [
+					'insertImageViaUrl'
+				]
+			}
+		},
+		styles: [
+			'alignLeft',
+			'alignCenter',
+			'alignRight'
+		],
+		resizeOptions: [
+			{
+				name: 'imageResize:original',
+				label: 'Оригинал',
+				value: null
+			},
+			{
+				name: 'imageResize:50',
+				label: '50%',
+				value: '50'
+			},
+			{
+				name: 'imageResize:75',
+				label: '75%',
+				value: '75'
+			}
+		],
 		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
 			'|',
-			'imageTextAlternative'
+			'imageResize'
 		]
 	},
 	language: 'ru'
