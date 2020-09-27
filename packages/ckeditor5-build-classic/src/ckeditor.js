@@ -22,6 +22,7 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 export default class ClassicEditor extends ClassicEditorBase {}
 
 ClassicEditor.builtinPlugins = [
+	SimpleUploadAdapter,
 	Essentials,
 	Bold,
 	Italic,
@@ -33,8 +34,7 @@ ClassicEditor.builtinPlugins = [
 	ImageResize,
 	Paragraph,
 	Link,
-	List,
-	SimpleUploadAdapter
+	List
 ];
 
 ClassicEditor.defaultConfig = {
@@ -84,7 +84,8 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
 			'|',
 			'imageResize'
-		]
+		],
 	},
+	simpleUpload: {},
 	language: 'ru'
 };
