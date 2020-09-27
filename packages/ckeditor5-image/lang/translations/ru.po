@@ -94,7 +94,7 @@ msgstr "Обновить"
 
 msgctxt "The input label for the Insert image via URL form."
 msgid "Insert image via URL"
-msgstr "Вставить изображение по URL"
+msgstr "URL изображения"
 
 msgctxt "The input label for the Insert image via URL form for a pre-existing image."
 msgid "Update image URL"

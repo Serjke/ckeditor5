@@ -14,6 +14,7 @@ import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import ImageResize from 'ckeditor5/packages/ckeditor5-image/src/imageresize';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -32,7 +33,8 @@ ClassicEditor.builtinPlugins = [
 	ImageResize,
 	Paragraph,
 	Link,
-	List
+	List,
+	SimpleUploadAdapter
 ];
 
 ClassicEditor.defaultConfig = {
