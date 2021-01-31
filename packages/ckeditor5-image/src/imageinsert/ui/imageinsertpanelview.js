@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -135,7 +135,7 @@ export default class ImageInsertPanelView extends View {
 					integrationView.fieldView.bind( 'value' ).to( this, 'imageURLInputValue', value => value || '' );
 
 					integrationView.fieldView.on( 'input', () => {
-						this.imageURLInputValue = integrationView.fieldView.element.value;
+						this.imageURLInputValue = integrationView.fieldView.element.value.trim();
 					} );
 				}
 
@@ -286,7 +286,7 @@ export default class ImageInsertPanelView extends View {
 			withText: true
 		} );
 
-		insertButtonView.bind( 'isEnabled' ).to( this, 'imageURLInputValue' );
+		insertButtonView.bind( 'isEnabled' ).to( this, 'imageURLInputValue', value => !!value );
 		insertButtonView.delegate( 'execute' ).to( this, 'submit' );
 		cancelButtonView.delegate( 'execute' ).to( this, 'cancel' );
 

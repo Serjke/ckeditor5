@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -15,9 +15,10 @@ import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
-import ImageResize from 'ckeditor5/packages/ckeditor5-image/src/imageresize';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -33,6 +34,7 @@ ClassicEditor.builtinPlugins = [
 	ImageUpload,
 	ImageResize,
 	Paragraph,
+	ImageInsert,
 	Link,
 	List
 ];
@@ -47,7 +49,7 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'|',
-			'imageUpload'
+			'ImageInsert'
 		]
 	},
 	image: {
@@ -84,7 +86,7 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
 			'|',
 			'imageResize'
-		],
+		]
 	},
 	simpleUpload: {},
 	language: 'ru'

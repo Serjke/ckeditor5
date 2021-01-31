@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -277,6 +277,20 @@ describe( 'ImageInsertUI', () => {
 				expect( dropdown.isOpen ).to.be.false;
 				sinon.assert.notCalled( commandSpy );
 				sinon.assert.calledOnce( cancelSpy );
+			} );
+
+			it( 'should focus on "insert image via URL" input after opening', () => {
+				let spy;
+
+				// The ImageInsertPanelView is added on first open.
+				// See https://github.com/ckeditor/ckeditor5/pull/8019#discussion_r484069652
+				dropdown.on( 'change:isOpen', () => {
+					const imageInsertPanelView = dropdown.panelView.children.first;
+					spy = sinon.spy( imageInsertPanelView, 'focus' );
+				}, { priority: 'highest' } );
+
+				dropdown.buttonView.fire( 'open' );
+				sinon.assert.calledOnce( spy );
 			} );
 		} );
 
