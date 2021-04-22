@@ -1,0 +1,5 @@
+
+CWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(êË¾¼
+MWeb:TableWithoutCaptionCheck." Add a description to this table.(¿‰˜ÿÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheck1";Add either an 'id' or a 'scope' attribute to this <th> tag.(¼¿çÃúÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheck2";Add either an 'id' or a 'scope' attribute to this <th> tag.(ÙÚÈ“
