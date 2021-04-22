@@ -1,20 +1,0 @@
-
-CWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M
-XWeb:FrameWithoutTitleCheck
-"-Add a "title" attribute to this <iframe> tag.(¸øşõúÿÿÿÿ
-MWeb:TableWithoutCaptionCheck" Add a description to this table.(„Ëêêÿÿÿÿÿ
-?	Web:S5256"%Add "<th>" headers to this "<table>".(„Ëêêÿÿÿÿÿ
-GWeb:BoldAndItalicTagsCheck:"!Replace this <b> tag by <strong>.(¸½š©
-CWeb:BoldAndItalicTagsCheck:"Replace this <i> tag by <em>.(¸½š©
-LWeb:BoldAndItalicTagsCheck<"!Replace this <b> tag by <strong>.(ë½Äûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(ë½Äûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(ë½Äûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(ë½Äûÿÿÿÿ
-MWeb:TableWithoutCaptionCheckP" Add a description to this table.(³Æàùÿÿÿÿ
-?	Web:S5256P"%Add "<th>" headers to this "<table>".(³Æàùÿÿÿÿ
-MWeb:TableWithoutCaptionChecks" Add a description to this table.(ºè«šıÿÿÿÿ
-?	Web:S5256s"%Add "<th>" headers to this "<table>".(ºè«šıÿÿÿÿ
-NWeb:TableWithoutCaptionCheck¥" Add a description to this table.(¿‰˜ÿÿÿÿÿ
-@	Web:S5256¥"%Add "<th>" headers to this "<table>".(¿‰˜ÿÿÿÿÿ
-N	Web:S4084Ï"3Add subtitles and description files for this video.(üŒñİÿÿÿÿÿ
-YWeb:FrameWithoutTitleCheckØ"-Add a "title" attribute to this <iframe> tag.(µ³´ñÿÿÿÿÿ
